@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: Chivo;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+img,
+button {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #121725;
+}
+
+h1,
+span {
+  color: #54e6af;
+  font-family: Chivo;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 62px;
+  text-transform: uppercase;
+}
+span {
+  color: white;
+}
+p {
+  width: 445px;
+  height: 84px;
+  color: #c2cbe5;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px; /* 155.556% */
+}
+.container {
+  width: 1440px;
+  height: 900px;
+  border: 1px solid white;
+  margin: 0 auto;
+}
+.container-wrapper {
+  width: 1275px;
+  height: 640px;
+  border: 2px solid red;
+  margin-left: 165px;
+  margin-top: 130px;
+  /* background-color: rgb(116, 114, 114); */
+  background: #121725;
+}
+.logo {
+  margin-top: -30px;
+}
+
+main {
+  width: 723px;
+  height: 509px;
+  display: flex;
+  flex-direction: row;
+}
+.main-info {
+  padding-top: 86px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  border: 1px solid red;
+}
+.image-host {
+}
+.main-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.main-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+form {
+  display: flex;
+}
+input[type="email"] {
+  display: inline-block;
+  width: 427px;
+  height: 56px;
+  border: 2px solid red;
+  border-radius: 28px;
+  background: #2c344b;
+  flex-grow: 1;
+
+  /* color: #fff; */
+  color: black;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  opacity: 0.5;
+}
+input[type="submit"] {
+  /* position: absolute; */
+  float: right;
+  width: 162px;
+  height: 46px;
+
+  border-radius: 28px;
+  background: #54e6af;
+  border: none;
+  box-shadow: 0px 2px 4px 0px rgba(84, 230, 175, 0.14);
+  color: #121725;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 200% */
+}
+.social {
+  display: flex;
+  gap: 40px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
