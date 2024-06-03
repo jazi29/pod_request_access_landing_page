@@ -62,20 +62,32 @@ p {
 }
 
 main {
-  width: 723px;
-  height: 509px;
+  position: relative;
   display: flex;
   flex-direction: row;
 }
 .main-info {
+  margin-top: 100px;
+  width: 723px;
+  height: 509px;
+  flex-shrink: 0;
   padding-top: 86px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-
   border: 1px solid red;
+  background-color: #121725;
+  z-index: 100;
+
 }
 .image-host {
+  position: absolute;
+  top: -5%;
+  left: 30%;
+  width: 888px;
+  height: 640px;
+  flex-shrink: 0;
+  background: url(assets/image-host.jpg);
 }
 .main-text {
   display: flex;
@@ -132,4 +144,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: right;
+}
+footer > img{
+  margin-top: -50px;
+  z-index: 100;
 }
