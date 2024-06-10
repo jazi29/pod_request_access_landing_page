@@ -26,7 +26,7 @@ span {
   font-family: Chivo;
   font-size: 52px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 62px;
   text-transform: uppercase;
 }
@@ -45,13 +45,13 @@ p {
 .container {
   width: 1440px;
   height: 900px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   margin: 0 auto;
+  background: #121725;
 }
 .container-wrapper {
   width: 1275px;
   height: 640px;
-  border: 2px solid red;
   margin-left: 165px;
   margin-top: 130px;
   /* background-color: rgb(116, 114, 114); */
@@ -72,10 +72,10 @@ main {
   height: 509px;
   flex-shrink: 0;
   padding-top: 86px;
+  margin-left: -5px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  border: 1px solid red;
   background-color: #121725;
   z-index: 100;
 
@@ -101,29 +101,34 @@ main {
 }
 form {
   display: flex;
-}
-input[type="email"] {
-  display: inline-block;
+  align-items: center;
   width: 427px;
   height: 56px;
-  border: 2px solid red;
+}
+input[type="email"] {
+  position: relative;
+  width: 427px;
+  height: 56px;
   border-radius: 28px;
   background: #2c344b;
   flex-grow: 1;
+  border: none;
 
   /* color: #fff; */
-  color: black;
+  color: #FFF;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
   opacity: 0.5;
+  padding-left: 30px;
 }
 input[type="submit"] {
-  /* position: absolute; */
-  float: right;
+  position: absolute;
+  left: 20%;
   width: 162px;
-  height: 46px;
+  height: 48px;
+  padding: 9px 27px;
 
   border-radius: 28px;
   background: #54e6af;
@@ -132,12 +137,18 @@ input[type="submit"] {
   color: #121725;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 28px; /* 200% */
 }
+input[type="submit"]:hover{
+  background-color: #B3FFE2;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
 .social {
   display: flex;
-  gap: 40px;
+  gap: 36px;
 }
 
 footer {
@@ -146,6 +157,6 @@ footer {
   justify-content: right;
 }
 footer > img{
-  margin-top: -50px;
+  margin-top: -53px;
   z-index: 100;
 }
