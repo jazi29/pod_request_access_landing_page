@@ -43,14 +43,14 @@ p {
   line-height: 28px; /* 155.556% */
 }
 .container {
-  width: 1440px;
+  max-width: 1440px;
   height: 900px;
-  /* border: 1px solid white; */
+  border: 1px solid white;
   margin: 0 auto;
   background: #121725;
 }
 .container-wrapper {
-  width: 1275px;
+  max-width: 1275px;
   height: 640px;
   margin-left: 165px;
   margin-top: 130px;
@@ -62,13 +62,14 @@ p {
 }
 
 main {
+  max-width: 1440px;
   position: relative;
   display: flex;
   flex-direction: row;
 }
 .main-info {
-  margin-top: 100px;
-  width: 723px;
+  margin-top: 101px;
+  max-width: 723px;
   height: 509px;
   flex-shrink: 0;
   padding-top: 86px;
@@ -78,17 +79,45 @@ main {
   gap: 40px;
   background-color: #121725;
   z-index: 100;
-
 }
-.image-host {
+
+/* .image-container {
   position: absolute;
   top: -5%;
   left: 30%;
-  width: 888px;
+  max-width: 888px;
+  width: 100%;
   height: 640px;
-  flex-shrink: 0;
-  background: url(assets/image-host.jpg);
 }
+
+.image-host {
+  width: 100%;
+  height: 640px;
+  background: url(assets/image-host.jpg) no-repeat center center;
+  background-size: cover;
+} */
+
+.image-container {
+  position: absolute;
+  top: -5%;
+  left: 30%;
+  width: 100%;
+  max-width: 888px;
+  height: auto;
+  max-height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* скрывает излишки */
+}
+
+.image-host {
+  width: 100%;
+  height: auto;
+  background: url("assets/image-host.jpg") no-repeat center center;
+  background-size: cover; /* cover или contain в зависимости от желаемого эффекта */
+}
+
 .main-text {
   display: flex;
   flex-direction: column;
@@ -102,12 +131,12 @@ main {
 form {
   display: flex;
   align-items: center;
-  width: 427px;
+  max-width: 427px;
   height: 56px;
 }
 input[type="email"] {
   position: relative;
-  width: 427px;
+  max-width: 427px;
   height: 56px;
   border-radius: 28px;
   background: #2c344b;
@@ -115,7 +144,7 @@ input[type="email"] {
   border: none;
 
   /* color: #fff; */
-  color: #FFF;
+  color: #fff;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -140,8 +169,8 @@ input[type="submit"] {
   font-weight: 800;
   line-height: 28px; /* 200% */
 }
-input[type="submit"]:hover{
-  background-color: #B3FFE2;
+input[type="submit"]:hover {
+  background-color: #b3ffe2;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -156,7 +185,7 @@ footer {
   align-items: center;
   justify-content: right;
 }
-footer > img{
+footer > img {
   margin-top: -53px;
   z-index: 100;
 }
