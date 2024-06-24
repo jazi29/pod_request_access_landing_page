@@ -60,6 +60,8 @@ height: 1024px; */
     font-size: 48px;
   }
   .logo {
+    top: 52px;
+    left: 115px;
     margin-left: -73px;
   }
   .main-info {
@@ -70,15 +72,41 @@ height: 1024px; */
   input[type="submit"] {
     left: 130px;
   }
-  .image-container {
+
+  /* .image-container {
     width: 491px;
     height: 767px;
-    top: -158px;
+    top: -155px;
+    right: 25px;
   }
   .image-host {
-    width: 491px;
-    height: 767px;
+    display: none;
   }
+  .image-host-tablet {
+    width: 491px;
+    width: 100%;
+    height: 767px;
+    background: url(assets/image-host-tablet.jpg) no-repeat center center;
+    background-size: cover;
+    border: 2px solid red;
+  } */
+
+  .image-container {
+    width: 491px;
+    width: 100%;
+    height: 767px;
+    top: -155px;
+    right: 25px;
+  }
+
+  .image-host {
+    display: none;
+  }
+
+  .image-host-tablet {
+    display: block;
+  }
+
   footer {
     justify-content: left;
   }
