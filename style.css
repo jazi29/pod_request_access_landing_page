@@ -49,6 +49,7 @@ p {
   border: 1px solid white;
   margin: 0 auto;
   background: #121725;
+  position: relative;
 }
 .container-wrapper {
   max-width: 1275px;
@@ -58,8 +59,12 @@ p {
   /* background-color: rgb(116, 114, 114); */
   background: #121725;
 }
+header {
+  margin-top: 158px;
+}
 .logo {
-  margin-top: -30px;
+  position: absolute;
+  top: 100px;
 }
 
 main {
@@ -94,11 +99,22 @@ main {
 }
 
 .image-host {
+  display: block;
   max-width: 888px;
   width: 100%;
   height: 640px;
   background: url(assets/image-host.jpg) no-repeat center center;
   background-size: cover;
+}
+
+.image-host-tablet {
+  display: none;
+  width: 100%;
+  max-width: 491px;
+  height: 767px;
+  background: url(assets/image-host-tablet.jpg) no-repeat center center;
+  background-size: cover;
+  border: 2px solid red;
 }
 
 .main-text {
