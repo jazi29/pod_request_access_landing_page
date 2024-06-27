@@ -48,8 +48,7 @@
   }
 }
 
-/* width: 768px;
-height: 1024px; */
+/* 768px - > 805px */
 
 @media screen and (min-width: 768px) and (max-width: 804px) {
   .container {
@@ -72,41 +71,19 @@ height: 1024px; */
   input[type="submit"] {
     left: 130px;
   }
-
-  /* .image-container {
-    width: 491px;
-    height: 767px;
-    top: -155px;
-    right: 25px;
-  }
   .image-host {
     display: none;
   }
-  .image-host-tablet {
-    width: 491px;
-    width: 100%;
-    height: 767px;
-    background: url(assets/image-host-tablet.jpg) no-repeat center center;
-    background-size: cover;
-    border: 2px solid red;
-  } */
-
   .image-container {
-    width: 491px;
+    max-width: 491px;
     width: 100%;
     height: 767px;
     top: -155px;
-    right: 25px;
+    right: 0;
   }
-
-  .image-host {
-    display: none;
-  }
-
   .image-host-tablet {
     display: block;
   }
-
   footer {
     justify-content: left;
   }
@@ -114,5 +91,73 @@ height: 1024px; */
     margin-top: 152px;
     margin-left: -139px;
     z-index: 100;
+  }
+}
+
+/* 675px - > 768px */
+
+@media screen and (min-width: 675px) and (max-width: 767px) {
+  .container {
+    height: 1024px;
+  }
+  h1,
+  span {
+    font-size: 48px;
+  }
+  .logo {
+    top: 52px;
+    left: 115px;
+    margin-left: -73px;
+  }
+  .main-info {
+    width: 635px;
+    height: 509px;
+    margin-left: -130px;
+  }
+  input[type="submit"] {
+    left: 130px;
+  }
+  .image-host {
+    display: none;
+  }
+  .image-container {
+    max-width: 491px;
+    width: 100%;
+    height: 767px;
+    top: -155px;
+    right: 0;
+  }
+  .image-host-tablet {
+    display: block;
+  }
+  footer {
+    justify-content: left;
+  }
+  footer > img {
+    margin-top: 152px;
+    margin-left: -139px;
+    z-index: 100;
+  }
+}
+
+/* 375px to 674px */
+@media screen and (min-width: 375px) and (max-width: 674px) {
+  .container {
+    height: 667px;
+    max-width: 675px;
+    background: url(assets/image-host-mobile.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  .main-info {
+    max-width: 375px;
+  }
+  .image-container {
+    display: none;
+  }
+  .image-host-tablet {
+    display: none;
+  }
+  footer {
+    display: none;
   }
 }
