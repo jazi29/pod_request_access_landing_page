@@ -196,19 +196,20 @@
 /* 545px to 675px */
 @media screen and (min-width: 375px) and (max-width: 544px) {
   .container {
-    height: 667px;
     max-width: 544px;
     background: url(assets/image-host-mobile.jpg) no-repeat center center;
     background-size: cover;
   }
   .container-wrapper {
     max-width: 544px;
+    background: none;
   }
   h1,
   span {
     font-size: 26px;
   }
   p {
+    width: 375px;
     font-size: 15px;
   }
   .logo {
@@ -219,12 +220,34 @@
     border: 2px solid red;
   }
   .main-info {
-    max-width: 375px;
+    /* width: 100%; */
+    max-width: 455px;
     margin-top: 0;
+    margin-left: -165px;
+    align-items: center;
   }
   .main-text {
     text-align: center;
     width: 100%;
+  }
+  .main-detail {
+    flex-direction: column-reverse;
+  }
+  form {
+    flex-direction: column;
+    gap: 16px;
+  }
+  input[type="email"] {
+    position: static;
+    width: 327px;
+    height: 46px;
+    flex-shrink: 0;
+  }
+  input[type="submit"] {
+    position: static;
+    width: 327px;
+    height: 46px;
+    flex-shrink: 0;
   }
   .image-container {
     display: none;
@@ -234,6 +257,10 @@
   }
   .social {
     gap: 23px;
+  }
+  .social > img {
+    width: 56px;
+    height: 17px;
   }
   footer {
     display: none;
