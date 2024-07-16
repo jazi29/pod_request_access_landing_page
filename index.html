@@ -14,6 +14,8 @@
   </head>
   <body>
     <div class="container">
+      <div class="overlay"></div>
+
       <div class="container-wrapper">
         <header>
           <div class="logo">
@@ -34,9 +36,9 @@
               </p>
             </div>
             <div class="main-detail">
-              <form action="#">
-                <input type="email" placeholder="Email address" required />
-                <input type="submit" value="Request Access" />
+              <form action="#" name="form">
+                <input type="email" placeholder="Email address" name="post" />
+                <input type="submit" value="Request Access" id="submit" />
               </form>
               <div class="social">
                 <img src="assets/spotify.svg" alt="spotify" />
@@ -58,4 +60,5 @@
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
