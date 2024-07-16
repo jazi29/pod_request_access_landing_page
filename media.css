@@ -1,8 +1,5 @@
 /* 1210 - > 1095px */
 @media screen and (min-width: 1095px) and (max-width: 1210px) {
-  body {
-    background-color: red;
-  }
   .main-info {
     width: 655px;
   }
@@ -16,9 +13,6 @@
 
 /* 1094 - > 805px */
 @media screen and (min-width: 805px) and (max-width: 1095px) {
-  body {
-    background-color: green;
-  }
   .container {
     height: 1024px;
   }
@@ -194,44 +188,177 @@
 }
 
 /* 545px to 675px */
-@media screen and (min-width: 375px) and (max-width: 544px) {
+/* and (max-width: 544px) */
+@media screen and (max-width: 376px) {
+  body {
+    background: #121725;
+    opacity: 0.7993;
+    mix-blend-mode: multiply;
+    /* background: url(assets/image-host-mobile.jpg) lightgray 0px 0px / 100% 100%
+      no-repeat; */
+    mix-blend-mode: screen;
+  }
   .container {
-    max-width: 544px;
-    background: url(assets/image-host-mobile.jpg) no-repeat center center;
-    background-size: cover;
+    background: url(assets/image-host-mobile.jpg) lightgray 0px 0px / 100% 100%
+      no-repeat;
+    max-width: 375px;
+    height: 667px;
   }
   .container-wrapper {
-    max-width: 544px;
+    max-width: 375px;
     background: none;
+    opacity: 100%;
+    height: 500px;
   }
   h1,
   span {
     font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 38px;
+    text-transform: uppercase;
+  }
+  span {
+    padding-top: 50px;
   }
   p {
-    width: 375px;
+    width: 327px;
+    color: #c2cbe5;
+    text-align: center;
+    font-family: Chivo;
     font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25px; /* 166.667% */
   }
   .logo {
     display: none;
   }
   .logo-mobile {
     display: block;
-    border: 2px solid red;
+    top: 61px;
+    left: 122px;
   }
   .main-info {
     /* width: 100%; */
-    max-width: 455px;
-    margin-top: 0;
+    max-width: 375px;
+    margin-top: -68px;
     margin-left: -165px;
     align-items: center;
+    background: transparent;
+    gap: 51px;
   }
   .main-text {
     text-align: center;
+    align-items: center;
     width: 100%;
+    gap: 16px;
   }
   .main-detail {
     flex-direction: column-reverse;
+    background-color: transparent;
+    gap: 45px;
+  }
+  form {
+    flex-direction: column;
+    gap: 16px;
+  }
+  input[type="email"] {
+    position: static;
+    width: 327px;
+    height: 46px;
+    flex-shrink: 0;
+  }
+  input[type="submit"] {
+    position: static;
+    width: 327px;
+    height: 46px;
+    flex-shrink: 0;
+  }
+  .image-container {
+    display: none;
+  }
+  .image-host-tablet {
+    display: none;
+  }
+  .social {
+    gap: 23px;
+  }
+  .social > img {
+    width: 56px;
+    height: 17px;
+  }
+  footer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 544px) {
+  body {
+    background: #121725;
+    opacity: 0.7993;
+    mix-blend-mode: multiply;
+    /* background: url(assets/image-host-mobile.jpg) lightgray 0px 0px / 100% 100%
+      no-repeat; */
+    mix-blend-mode: screen;
+  }
+  .container {
+    background: url(assets/image-host-mobile.jpg) lightgray 0px 0px / 100% 100%
+      no-repeat;
+    max-width: 544px;
+  }
+  .container-wrapper {
+    max-width: 544px;
+    background: none;
+    opacity: 100%;
+  }
+
+  h1,
+  span {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+  p {
+    width: 327px;
+    color: #c2cbe5;
+    text-align: center;
+    font-family: Chivo;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25px; /* 166.667% */
+  }
+  .logo {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+    top: 40px;
+    left: 70px;
+  }
+
+  .main-info {
+    width: 100%;
+    max-width: 544px;
+    margin-top: -30px;
+    margin-left: -85px;
+    align-items: center;
+    background: transparent;
+    gap: 51px;
+  }
+  .main-text {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+  }
+  .main-detail {
+    flex-direction: column-reverse;
+    background-color: transparent;
+    gap: 45px;
   }
   form {
     flex-direction: column;
