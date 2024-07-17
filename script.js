@@ -8,17 +8,51 @@
 //   }
 // }
 
-let form = document.getElementById("form");
-let clickPost = document.getElementById("post");
-let submitButton = document.getElementById("submit");
-let errorMessage = "Oops! Please add your email";
-errorMessage.style.color = "red";
+// alert("Oops! Please add your email")
+// errorMessage.style.color = "red";
+// form.innerHTML = errorMessage;
 
-function formValidate() {
-  if (clickPost.value == "") {
-    // alert("Oops! Please add your email")
-    // errorMessage.style.color = "red";
-    // form.innerHTML = errorMessage;
-    form.insertAdjacentHTML("afterend", errorMessage);
+// let form = document.getElementById("form");
+
+// function formValidate() {
+//   if (clickPost.value == "") {
+//     errorMessage.style.display = "block";
+//     event.preventDefault();
+
+//     clickPost.addEventListener("input", function (event) {
+//       // console.log("Пользователь вводит текст: " + event.target.value);
+//       errorMessage.style.display = "none";
+
+//       if (email.validity.typeMismatch) {
+//         // errorMessage.style.display = "block";
+//         alert("No");
+//         event.preventDefault();
+//       }
+//     });
+//   }
+// }
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  let clickPost = document.getElementById("post");
+  let email = document.getElementById("email");
+  let errorMessage = document.getElementById("error-message");
+
+  if (clickPost.value === "") {
+    errorMessage.style.display = "block";
+    event.preventDefault();
+  } else {
+    errorMessage.style.display = "none";
   }
-}
+
+  clickPost.addEventListener("input", function () {
+    if (clickPost.value !== "") {
+      errorMessage.style.display = "none";
+      console.log("Пользователь вводит текст: " + event.target.value);
+    }
+  });
+
+  if (email.validity.typeMismatch) {
+    alert("Пожалуйста, введите корректный email-адрес.");
+    event.preventDefault();
+  }
+});
