@@ -189,3 +189,21 @@ footer > img {
   margin-top: -53px;
   z-index: 100;
 }
+
+.error-message,
+.check-message {
+  display: none;
+  position: absolute;
+  bottom: 1px;
+  left: 25px;
+  color: #fb3e3e;
+  font-family: Chivo;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+input[type="email"]::-webkit-validation-bubble-message {
+  display: none;
+}
