@@ -1,13 +1,3 @@
-// function validateForm() {
-//   let form = document.forms["form"]["post"].value;
-//   let submit = document.getElementById("submit");
-
-//   if (form == "") {
-//     alert("OOps");
-//     return false;
-//   }
-// }
-
 // alert("Oops! Please add your email")
 // errorMessage.style.color = "red";
 // form.innerHTML = errorMessage;
@@ -36,9 +26,12 @@ document.getElementById("form").addEventListener("submit", function (event) {
   let clickPost = document.getElementById("post");
   let email = document.getElementById("email");
   let errorMessage = document.getElementById("error-message");
+  let checkMessage = document.getElementById("check-message");
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (clickPost.value === "") {
     errorMessage.style.display = "block";
+    checkMessage.style.display = "none";
     event.preventDefault();
   } else {
     errorMessage.style.display = "none";
@@ -47,12 +40,22 @@ document.getElementById("form").addEventListener("submit", function (event) {
   clickPost.addEventListener("input", function () {
     if (clickPost.value !== "") {
       errorMessage.style.display = "none";
+
       console.log("Пользователь вводит текст: " + event.target.value);
     }
   });
 
-  if (email.validity.typeMismatch) {
-    alert("Пожалуйста, введите корректный email-адрес.");
+  if (!emailPattern.test(email)) {
+    checkMessage.style.display = "block";
+    errorMessage.style.display = "none";
+
     event.preventDefault();
+  } else {
+    checkMessage.style.display = "none";
   }
+
+  // if (email.validity.typeMismatch) {
+  //   alert("Пожалуйста, введите корректный email-адрес.");
+  //   event.preventDefault();
+  // }
 });
