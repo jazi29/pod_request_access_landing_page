@@ -36,10 +36,21 @@
               </p>
             </div>
             <div class="main-detail">
-              <form action="#" name="form">
-                <input type="email" placeholder="Email address" name="post" />
+              <form action="#" name="form" id="form" novalidate>
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  name="post"
+                  id="post"
+                />
                 <input type="submit" value="Request Access" id="submit" />
               </form>
+              <p class="error-message" id="error-message">
+                Oops! Please add your email
+              </p>
+              <p class="check-message" id="check-message">
+                Oops! Please check your email
+              </p>
               <div class="social">
                 <img src="assets/spotify.svg" alt="spotify" />
                 <img src="assets/apple-podcast.svg" alt="apple-podcast" />
